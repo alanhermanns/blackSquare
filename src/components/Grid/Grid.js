@@ -5,7 +5,6 @@ import { makeRandomGap } from '../../help/makeRandomGap';
 const Grid = () => {
   const [holeNumbers, setHoleNumbers] = useState([]);
   const [loading, setLoading] = useState(true);
-  // const nameArr = ['A', 'L', 'A', 'N', 'R', 'A', 'V', 'I', 'L', 'H', 'E', 'R', 'M', 'A', 'N', 'N', 'S'];
   const nameArr = ['A', 'H', 'O', 'R', 'S', 'E', 'I', 'S', 'A', 'H', 'O', 'R', 'S', 'E'];
 
   let i = 0;
@@ -19,10 +18,9 @@ const Grid = () => {
   let k = -1;
   const gridLis = gridArr.map(i => {
     if(k === 16){k = 0;}
-    console.log('k', k);
     if(holeNumbers.includes(i)){
       k++;
-      return (<li key={i} value={i} style={{ backgroundColor: 'black', color: 'white' }}>{nameArr[k]}</li>);
+      return (<li key={i} value={i} style={{ backgroundColor: 'black', color: 'white', opacity: '100%' }}>{nameArr[k]}</li>);
     }
     return (<li key={i} value={i}>{i}</li>);
   });
@@ -39,7 +37,6 @@ const Grid = () => {
   
   return (
     <>
-      {/* <h1>Alan Hermanns</h1> */}
       <ul className={styles.Grid}>
         {gridLis}
       </ul>

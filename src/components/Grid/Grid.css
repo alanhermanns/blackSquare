@@ -2,9 +2,23 @@ ul{
     display: grid;
     grid-template-columns: repeat(15, 5vw [col-start]);
     list-style: none;
+    animation: fade 8s 1s infinite alternate;
     li{
         border: .5px solid black;
         font-size: 10;
         color: black;
     }
 }
+    ul:hover{
+        background-image: url('../../assets/tigerJumpingPNG.png');
+    }
+
+    @keyframes fade{
+        0%{
+            opacity: 100%;
+
+        }
+        100%{
+            opacity : 10%;
+        }
+    }
