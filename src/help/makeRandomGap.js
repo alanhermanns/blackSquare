@@ -1,6 +1,7 @@
 export const makeRandomGap = () => {
   let size = Math.floor(Math.random() * 9);
   let start = Math.floor(Math.random() * 200);
+  console.log('size', size);
   const makeGap = () => {
     let k = 0;
     let arr = [];
@@ -10,6 +11,7 @@ export const makeRandomGap = () => {
         i++;
         arr.push(start + i + k);
       }
+      console.log(arr);
       k = k + 15;
     }
     return arr;

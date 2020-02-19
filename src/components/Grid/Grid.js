@@ -16,13 +16,14 @@ const Grid = () => {
   }
   const gridLis = gridArr.map(i => {
     if(holeNumbers.includes(i)){
-      return (<li key={i} value={i} style={{ backgroundColor:'black' }}>{i}</li>);
+      console.log(i);
+      return (<li key={i} value={i} style={{ backgroundColor: 'black' }}>{i}</li>);
     }
     return (<li key={i} value={i}>{i}</li>);
   });
 
   useEffect(() => {
-    const gapNumbers = makeRandomGap();
+    const gapNumbers = makeRandomGap()[0];
     setHoleNumbers(gapNumbers);
   }, [loading]);
 
@@ -32,9 +33,12 @@ const Grid = () => {
   
   
   return (
-    <ul className={styles.Grid}>
-      {gridLis}
-    </ul>
+    <>
+      <h1>Alan Hermanns</h1>
+      <ul className={styles.Grid}>
+        {gridLis}
+      </ul>
+    </>
   );
 }
 ;

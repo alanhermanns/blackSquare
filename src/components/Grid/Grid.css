@@ -4,8 +4,6 @@ ul{
     list-style: none;
     li{
         border: .5px solid black;
-        color: white;
         font-size: 10;
     }
 }
-//background-color:rgb(89, 70, 143);
